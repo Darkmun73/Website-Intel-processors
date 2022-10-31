@@ -1,0 +1,204 @@
+<html >
+<head>
+   <meta charset="utf-8" />
+   <title>Пример лабораторной работы</title>
+</head>
+<body>
+    <h2>Меню</h2>
+    <ul type="none">
+      <li ><a href="index.html">Процессоры Intel</a></li>      
+      <li><a href="list.html"><big><b>Список процессоров Intel последних поколений</b></big></a></li>
+    </ul>
+<hr>
+<h2>Список</h2>
+<details>
+    <summary> График </summary>
+    <form>
+        <table>
+          <tr>
+            <th>Значениe по оси OX</th>
+            <th>Результат</th>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="ox" value="0">Семейство процессоров<br>
+              <input type="radio" name="ox" value="1">Поколение<br>
+              <input type="radio" name="ox" value="3">Дата выпуска<br>
+            </td>
+            <td>
+              <input type="checkbox" name="oy" value="0">Максимальная частота<br>
+              <input type="checkbox" name="oy" value="1">Минимальная стоимость<br>
+			  <input type="checkbox" name="oy" value="3">Количество моделей процессоров<br>
+            </td>
+          </tr>
+        </table>
+		<input type=button value="Построить">
+		<p>Здесь будет график</p>
+	</form>	
+</details> 
+<details>
+    <summary> Фильтр</summary>
+    <form>
+        <p>
+           <label for="processor">Модель:</label>
+		   <input type=text name="processor">
+        </p>
+        <p>
+		    <label for="family">Семейство процессоров:</label>
+            <input type=text name="family">
+        </p>
+        <p>
+		   <label for="generation">Поколение:</label>
+          <input type=text name="generation">
+        </p>
+		<p>
+		   <label for="cores">Количество ядер:</label>
+           <input type=text name="cores">
+        </p>
+		<p>
+			<label for="threads">Количество потоков:</label>
+			<input type=text name="threads">
+		 </p>
+ 		<p>
+			<label for="priceFrom">Стоимость: </label>
+           	от <input type=text name="priceFrom"> до <input type=text name="priceTo">
+        </p>
+        <p>
+			Дата выпуска:
+			<table>
+				<tr>
+					<td><label for="year">Год</label></th>
+					<td><label for="quartal">Квартал</label></th>
+				</tr>
+				<tr>
+					<td><input type=text name="year"></th>
+					<td><input type=number name="quartal" min="1" max="4"></th>
+				</tr>
+			</table>
+        </p>
+        <input type=button value="Найти">		
+	</form>	
+</details> 
+<details>
+    <summary>Сортировка</summary>
+    <form>
+	  <p>
+          Первый уровень:
+          <select name="sortFirst">
+            <option value="0">Нет</option>
+            <option value="1">Модель</option>
+            <option value="2">Семейство процессоров</option>
+            <option value="3">Поколение</option>
+            <option value="4">Количество ядер</option>
+            <option value="5">Количество потоков</option>
+			<option value="6">Тактовая частота</option>
+            <option value="7">Стоимость</option>
+            <option value="8">Дата выпуска</option>
+          </select>
+          по убыванию? <input  type="checkbox"  name= "descFirst" >
+        </p>  
+        <p>
+          Второй уровень:
+		  <select name="sortSecond">
+            <option value="0">Нет</option>
+            <option value="1">Модель</option>
+            <option value="2">Семейство процессоров</option>
+            <option value="3">Поколение</option>
+            <option value="4">Количество ядер</option>
+            <option value="5">Количество потоков</option>
+			<option value="6">Тактовая частота</option>
+            <option value="7">Стоимость</option>
+            <option value="8">Дата выпуска</option>
+          </select>
+          по убыванию? <input  type="checkbox"  name= "descSecond" >
+        </p>
+        <p>
+          Третий уровень:
+          <select name="sortThird">
+            <option value="0">Нет</option>
+            <option value="1">Модель</option>
+            <option value="2">Семейство процессоров</option>
+            <option value="3">Поколение</option>
+            <option value="4">Количество ядер</option>
+            <option value="5">Количество потоков</option>
+			<option value="6">Тактовая частота</option>
+            <option value="7">Стоимость</option>
+            <option value="8">Дата выпуска</option>
+          </select>
+          по убыванию? <input  type="checkbox"  name= "descThird" >
+        </p>
+      <input type=button value="Сортировать">		
+	</form>	
+</details> 
+<br>    
+<table border="1" cellspacing="0" cellpadding="5">
+	<tr><th rowspan="2">Модель</th><th rowspan="2">Семейство процессоров</th><th rowspan="2">Поколение</th><th colspan="2">Ядра</th><th rowspan="2">Тактовая частота, ГГц</th><th rowspan="2">Стоимость (USD)</th><th colspan="2">Дата выпуска</td></tr>
+    <tr><th>Количество ядер</th><th>Количество потоков</th><th>Год</th><th>Квартал</td></tr>
+	<tr><td>12900K</td><td>Core i9</td><td>12</td><td>8</td><td>24</td><td>3.2</td><td>589</td><td>2021</td><td>4</td></tr>
+	<tr><td>12900KF</td><td>Core i9</td><td>12</td><td>8</td><td>24</td><td>3.2</td><td>569</td><td>2021</td><td>4</td></tr>
+	<tr><td>12900KS</td><td>Core i9</td><td>12</td><td>8</td><td>24</td><td>3.4</td><td>739</td><td>2022</td><td>1</td></tr>
+	<tr><td>12900</td><td>Core i9</td><td>12</td><td>8</td><td>24</td><td>2.4</td><td>489</td><td>2022</td><td>1</td></tr>
+	<tr><td>12900F</td><td>Core i9</td><td>12</td><td>8</td><td>24</td><td>2.4</td><td>464</td><td>2022</td><td>1</td></tr>
+	<tr><td>12900T</td><td>Core i9</td><td>12</td><td>8</td><td>24</td><td>1.4</td><td>489</td><td>2022</td><td>1</td></tr>
+	<tr><td>12700K</td><td>Core i7</td><td>12</td><td>8</td><td>20</td><td>3.6</td><td>409</td><td>2021</td><td>4</td></tr>
+	<tr><td>12700KF</td><td>Core i7</td><td>12</td><td>8</td><td>20</td><td>3.6</td><td>384</td><td>2021</td><td>4</td></tr>
+	<tr><td>12700</td><td>Core i7</td><td>12</td><td>8</td><td>20</td><td>2.1</td><td>339</td><td>2022</td><td>1</td></tr>
+	<tr><td>12700F</td><td>Core i7</td><td>12</td><td>8</td><td>20</td><td>2.1</td><td>314</td><td>2022</td><td>1</td></tr>
+	<tr><td>12700T</td><td>Core i7</td><td>12</td><td>8</td><td>20</td><td>1.4</td><td>339</td><td>2022</td><td>1</td></tr>
+	<tr><td>12600K</td><td>Core i5</td><td>12</td><td>6</td><td>16</td><td>3.7</td><td>289</td><td>2021</td><td>4</td></tr>
+	<tr><td>12600KF</td><td>Core i5</td><td>12</td><td>6</td><td>16</td><td>3.7</td><td>264</td><td>2021</td><td>4</td></tr>
+	<tr><td>12600</td><td>Core i5</td><td>12</td><td>6</td><td>12</td><td>3.3</td><td>223</td><td>2022</td><td>1</td></tr>
+	<tr><td>12600T</td><td>Core i5</td><td>12</td><td>6</td><td>12</td><td>2.1</td><td>223</td><td>2022</td><td>1</td></tr>
+	<tr><td>12500</td><td>Core i5</td><td>12</td><td>6</td><td>12</td><td>3.0</td><td>202</td><td>2022</td><td>1</td></tr>
+	<tr><td>12500T</td><td>Core i5</td><td>12</td><td>6</td><td>12</td><td>2.0</td><td>202</td><td>2022</td><td>1</td></tr>
+	<tr><td>12400</td><td>Core i5</td><td>12</td><td>6</td><td>12</td><td>2.5</td><td>192</td><td>2022</td><td>1</td></tr>
+	<tr><td>12400F</td><td>Core i5</td><td>12</td><td>6</td><td>12</td><td>2.5</td><td>167</td><td>2022</td><td>1</td></tr>
+	<tr><td>12400T</td><td>Core i5</td><td>12</td><td>6</td><td>12</td><td>1.8</td><td>192</td><td>2022</td><td>1</td></tr>
+	<tr><td>12300</td><td>Core i3</td><td>12</td><td>4</td><td>8</td><td>3.5</td><td>143</td><td>2022</td><td>1</td></tr>
+	<tr><td>12300T</td><td>Core i3</td><td>12</td><td>4</td><td>8</td><td>2.3</td><td>143</td><td>2022</td><td>1</td></tr>
+	<tr><td>12100</td><td>Core i3</td><td>12</td><td>4</td><td>8</td><td>3.3</td><td>122</td><td>2022</td><td>1</td></tr>
+	<tr><td>12100F</td><td>Core i3</td><td>12</td><td>4</td><td>8</td><td>3.3</td><td>97</td><td>2022</td><td>1</td></tr>
+	<tr><td>12100T</td><td>Core i3</td><td>12</td><td>4</td><td>8</td><td>2.2</td><td>122</td><td>2022</td><td>1</td></tr>
+	<tr><td>G7400</td><td>Pentium</td><td>12</td><td>2</td><td>4</td><td>3.7</td><td>64</td><td>2022</td><td>1</td></tr>
+	<tr><td>G7400T</td><td>Pentium</td><td>12</td><td>2</td><td>4</td><td>3.1</td><td>64</td><td>2022</td><td>1</td></tr>
+	<tr><td>G6900</td><td>Celeron</td><td>12</td><td>2</td><td>2</td><td>3.4</td><td>42</td><td>2022</td><td>1</td></tr>
+	<tr><td>G6900T</td><td>Celeron</td><td>12</td><td>2</td><td>2</td><td>2.8</td><td>42</td><td>2022</td><td>1</td></tr>
+	<tr><td>11900T</td><td>Core i9</td><td>11</td><td>8</td><td>16</td><td>1.5</td><td>439</td><td>2021</td><td>1</td></tr>
+	<tr><td>11900KF</td><td>Core i9</td><td>11</td><td>8</td><td>16</td><td>3.5</td><td>513</td><td>2021</td><td>1</td></tr>
+	<tr><td>11900K</td><td>Core i9</td><td>11</td><td>8</td><td>16</td><td>3.5</td><td>539</td><td>2021</td><td>1</td></tr>
+	<tr><td>11900F</td><td>Core i9</td><td>11</td><td>8</td><td>16</td><td>2.5</td><td>422</td><td>2021</td><td>1</td></tr>
+	<tr><td>11900</td><td>Core i9</td><td>11</td><td>8</td><td>16</td><td>2.5</td><td>439</td><td>2021</td><td>1</td></tr>
+	<tr><td>11700T</td><td>Core i7</td><td>11</td><td>8</td><td>16</td><td>1.4</td><td>323</td><td>2021</td><td>1</td></tr>
+	<tr><td>11700KF</td><td>Core i7</td><td>11</td><td>8</td><td>16</td><td>3.6</td><td>374</td><td>2021</td><td>1</td></tr>
+	<tr><td>11700K</td><td>Core i7</td><td>11</td><td>8</td><td>16</td><td>3.6</td><td>399</td><td>2021</td><td>1</td></tr>
+	<tr><td>11700F</td><td>Core i7</td><td>11</td><td>8</td><td>16</td><td>2.5</td><td>298</td><td>2021</td><td>1</td></tr>
+	<tr><td>11700</td><td>Core i7</td><td>11</td><td>8</td><td>16</td><td>2.5</td><td>323</td><td>2021</td><td>1</td></tr>
+	<tr><td>11600T</td><td>Core i5</td><td>11</td><td>6</td><td>12</td><td>1.7</td><td>213</td><td>2021</td><td>1</td></tr>
+	<tr><td>11600KF</td><td>Core i5</td><td>11</td><td>6</td><td>12</td><td>3.9</td><td>237</td><td>2021</td><td>1</td></tr>
+	<tr><td>11600K</td><td>Core i5</td><td>11</td><td>6</td><td>12</td><td>3.9</td><td>262</td><td>2021</td><td>1</td></tr>
+	<tr><td>11600</td><td>Core i5</td><td>11</td><td>6</td><td>12</td><td>2.8</td><td>213</td><td>2021</td><td>1</td></tr>
+	<tr><td>11500T</td><td>Core i5</td><td>11</td><td>6</td><td>12</td><td>1.5</td><td>192</td><td>2021</td><td>1</td></tr>
+	<tr><td>11500</td><td>Core i5</td><td>11</td><td>6</td><td>12</td><td>2.7</td><td>192</td><td>2021</td><td>1</td></tr>
+	<tr><td>11400T</td><td>Core i5</td><td>11</td><td>6</td><td>12</td><td>1.3</td><td>182</td><td>2021</td><td>1</td></tr>
+	<tr><td>11400F</td><td>Core i5</td><td> 11</td><td>6</td><td>12</td><td>2.6</td><td>157</td><td>2021</td><td>1</td></tr>
+	<tr><td>11400</td><td>Core i5</td><td> 11</td><td>6</td><td>12</td><td>2.6</td><td>182</td><td>2021</td><td>1</td></tr>
+	<tr><td>10910</td><td>Core i9</td><td> 10</td><td>10</td><td>20</td><td>3.6</td><td>-</td><td>2020</td><td>3</td></tr>
+	<tr><td>10900K</td><td>Core i9</td><td> 10</td><td>10</td><td>20</td><td>3.7</td><td>488</td><td>2020</td><td>2</td></tr>
+	<tr><td>10900KF</td><td>Core i9</td><td> 10</td><td>10</td><td>20</td><td>3.7</td><td>463</td><td>2020</td><td>2</td></tr>
+	<tr><td>10900</td><td>Core i9</td><td> 10</td><td>10</td><td>20</td><td>2.8</td><td>439</td><td>2020</td><td>2</td></tr>
+	<tr><td>10900E</td><td>Core i9</td><td> 10</td><td>10</td><td>20</td><td>2.8</td><td>440</td><td>2020</td><td>2</td></tr>
+	<tr><td>10900F</td><td>Core i9</td><td> 10</td><td>10</td><td>20</td><td>2.8</td><td>422</td><td>2020</td><td>2</td></tr>
+	<tr><td>10900T</td><td>Core i9</td><td> 10</td><td>10</td><td>20</td><td>1.9</td><td>439</td><td>2020</td><td>2</td></tr>
+	<tr><td>10850K</td><td>Core i9</td><td> 10</td><td>10</td><td>20</td><td>3.6</td><td>453</td><td>2020</td><td>2</td></tr>
+	<tr><td>10700K </td><td>Core i7</td><td>10</td><td>8</td><td>16</td><td>3.8</td><td>374</td><td>2020</td><td>2</td></tr>
+	<tr><td>10700KF</td><td>Core i7</td><td> 10</td><td>8</td><td>16</td><td>3.8</td><td>349</td><td>2020</td><td>2</td></tr>
+	<tr><td>10700</td><td>Core i7</td><td> 10</td><td>8</td><td>16</td><td>2.9</td><td>323</td><td>2020</td><td>2</td></tr>
+	<tr><td>10700E</td><td>Core i7</td><td> 10</td><td>8</td><td>16</td><td>2.9</td><td>330</td><td>2020</td><td>2</td></tr>
+	<tr><td>10700F</td><td>Core i7</td><td> 10</td><td>8</td><td>16</td><td>2.9</td><td>298</td><td>2020</td><td>2</td></tr>
+	<tr><td>10700T</td><td>Core i7</td><td> 10</td><td>8</td><td>16</td><td>2.0</td><td>323</td><td>2020</td><td>2</td></tr>
+	<tr><td>10700TE</td><td>Core i7</td><td>10</td><td>8</td><td>16</td><td>2.0</td><td>330</td><td>2020</td><td>2</td></tr>
+	<tr><td>10600K</td><td>Core i5</td><td> 10</td><td>6</td><td>12</td><td>4.1</td><td>262</td><td>2020</td><td>2</td></tr>
+	<tr><td>10600KF</td><td>Core i5</td><td> 10</td><td>6</td><td>12</td><td>4.1</td><td>237</td><td>2020</td><td>2</td></tr>
+</table>
+</body>
+</html>
